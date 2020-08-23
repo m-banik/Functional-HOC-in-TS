@@ -7,7 +7,7 @@ export type StateType = {
 };
 
 export function withEmphasis<T>(
-  WrapperdComponent: React.ComponentType<T & StateType>
+  WrapperdComponent: React.FunctionComponent<T>
 ) {
   const ComponentWithEmphasis = (props: T) => {
     const [isEmphasized, setIsEmphasized] = React.useState(true);

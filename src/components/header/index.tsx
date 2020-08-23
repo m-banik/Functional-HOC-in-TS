@@ -4,9 +4,9 @@ import styles from './styles.module.css';
 
 type HeaderType = (
   props: StateType & {
-    backgroundColor: string;
-    color: string;
-    text: string;
+    backgroundColor: string,
+    color: string,
+    text: string
   }
 ) => JSX.Element;
 
