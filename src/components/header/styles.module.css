@@ -1,0 +1,11 @@
+.headerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
