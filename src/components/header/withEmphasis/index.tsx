@@ -2,20 +2,20 @@ import React from 'react';
 import Header from '../';
 
 export type StateType = {
-  isEmphasised?: boolean;
-  setIsEmphasised?: React.Dispatch<React.SetStateAction<boolean>>;
+  isEmphasized?: boolean;
+  setIsEmphasized?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export function withEmphasis<T>(
   WrapperdComponent: React.ComponentType<T & StateType>
 ) {
   const ComponentWithEmphasis = (props: T) => {
-    const [isEmphasised, setIsEmphasised] = React.useState(true);
+    const [isEmphasized, setIsEmphasized] = React.useState(true);
     return (
       <WrapperdComponent
         {...props}
-        isEmphasised={isEmphasised}
-        setIsEmphasised={setIsEmphasised}
+        isEmphasized={isEmphasized}
+        setIsEmphasized={setIsEmphasized}
       />
     );
   };

@@ -12,8 +12,16 @@ const props = {
 ReactDOM.render(
   <React.StrictMode>
     <React.Fragment>
-      <Header {...props} />
-      <HeaderWithEmphasis {...props} />
+      <Header
+        text={props.text}
+        color={props.color}
+        backgroundColor={props.backgroundColor}
+      />
+      <HeaderWithEmphasis
+        text={props.text}
+        color={props.color}
+        backgroundColor={props.backgroundColor}
+      />
     </React.Fragment>
   </React.StrictMode>,
   document.getElementById('root')

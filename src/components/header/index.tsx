@@ -14,26 +14,31 @@ const Header: HeaderType = ({
   backgroundColor,
   color,
   text,
-  isEmphasised,
-  setIsEmphasised,
+  isEmphasized,
+  setIsEmphasized,
 }) => {
   const headerStyles = {
     backgroundColor,
     color,
-    textDecoration: isEmphasised ? 'underline' : 'none',
-    cursor: isEmphasised !== undefined ? 'pointer' : 'default',
-    borderRadius: isEmphasised ? '12px' : undefined,
+    textDecoration: isEmphasized ? 'underline' : 'none',
+    cursor: isEmphasized !== undefined ? 'pointer' : 'default',
+    borderRadius: isEmphasized ? '12px' : undefined,
   };
   const onClick = () => {
-    if (setIsEmphasised) {
-      setIsEmphasised(!isEmphasised);
+    if (setIsEmphasized) {
+      setIsEmphasized(!isEmphasized);
     }
   };
   return (
     <div className={styles.headerContainer}>
-      <h1 style={headerStyles} className={styles.header} onClick={onClick}>
-        {text}
-      </h1>
+      {setIsEmphasized ?
+        (<h1 style={headerStyles} className={styles.header} onClick={onClick}>
+          {text}
+        </h1>)
+        :
+        (<h1 style={headerStyles} className={styles.header}>
+          {text}
+        </h1>)}
     </div>
   );
 };
